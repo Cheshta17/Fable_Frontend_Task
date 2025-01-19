@@ -1,0 +1,12 @@
+{
+  "name": "image-annotator",
+  "version": "1.0.0",
+  "description": "Vanilla JavaScript Image Annotation Tool",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "serve src"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
