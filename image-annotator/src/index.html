@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Annotation Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="moving-background">
+        <div class="text-row">
+            <span>Annotate</span>
+            <span>Mark</span>
+            <span>Write</span>
+            <span>Edit</span>
+            <span>Save</span>
+            <span>Annotate</span>
+            <span>Mark</span>
+            <span>Write</span>
+        </div>
+        <div class="text-row">
+            <span>Create</span>
+            <span>Design</span>
+            <span>Drag</span>
+            <span>Point</span>
+            <span>Create</span>
+            <span>Design</span>
+            <span>Drag</span>
+        </div>
+        <div class="text-row">
+            <span>Edit</span>
+            <span>Delete</span>
+            <span>Analyze</span>
+            <span>Label</span>
+            <span>Edit</span>
+            <span>Delete</span>
+            <span>Analyze</span>
+        </div>
+        <div class="text-row">
+            <span>Images</span>
+            <span>Notes</span>
+            <span>Label</span>
+            <span>Save</span>
+            <span>Images</span>
+            <span>Notes</span>
+            <span>Label</span>
+        </div>
+        <div class="text-row">
+            <span>Select</span>
+            <span>Write</span>
+            <span>Point</span>
+            <span>Mark</span>
+            <span>Select</span>
+            <span>Write</span>
+            <span>Point</span>
+        </div>
+        <div class="floating-image floating-icon-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+        </div>
+        <div class="floating-image floating-icon-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+        </div>
+        <div class="floating-image floating-icon-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="min-h-screen py-8">
+        <div class="container">
+            <header class="header">
+                <h1 class="animated-text">Image Annotation Tool</h1>
+                <p>Upload an image and start annotating</p>
+            </header>
+            <main>
+                <div class="annotator-container">
+                    <div class="upload-container">
+                        <input type="file" id="imgUpload" accept="image/*" class="file-input">
+                    </div>
+                    <div class="image-container" id="imageContainer">
+                        <img id="uploadedImg" class="uploaded-image" style="display: none;">
+                        <div id="tooltipContainer" class="tooltip-container"></div>
+                    </div>
+                    <button id="saveButton" class="save-button" style="display: none;">
+                        Save Annotated Image
+                    </button>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>Upload, Hover, and explore!</p>
+            </footer>
+        </div>
+    </div>
+    <script src="js/imgAnnotator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
