@@ -42,8 +42,8 @@ class ImgAnnotator {
     getCoordinates(event) {
         const rect = this.uploadedImg.getBoundingClientRect();
         return {
-            x: Math.max(0, Math.min(event.clientX - rect.left, rect.width)),
-            y: Math.max(0, Math.min(event.clientY - rect.top, rect.height))
+            x: Math.max(10, Math.min(event.clientX - rect.left, rect.width-10)),
+            y: Math.max(10, Math.min(event.clientY - rect.top, rect.height-10))
         };
     }
 
